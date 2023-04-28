@@ -5,14 +5,6 @@
  *	@author Nathan Glasl <nathan@symbiote.com.au>
  */
 
-if(!defined('APIWESOME_PATH')) {
-	define('APIWESOME_PATH', rtrim(basename(dirname(__FILE__))));
-}
-
-// Update the current apiwesome admin icon.
-
-Config::inst()->update('APIwesomeAdmin', 'menu_icon', APIWESOME_PATH . '/images/icon.png');
-
 /**
  *
  *	EXAMPLE: JSON/XML data object exclusions/inclusions.

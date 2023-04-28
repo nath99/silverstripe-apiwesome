@@ -14,21 +14,27 @@
 	"authors": [{
 		"name": "Nathan Glasl",
 		"email": "nathan@symbiote.com.au"
-	}],
+	}, {
+        "name": "Nathan Barry",
+        "email": "nathanb@symbiote.com.au"
+    }],
 	"require": {
 		"silverstripe/cms": "^4",
 		"silverstripe/framework": "^4",
 		"silverstripe/vendor-plugin": "^1.6"
 	},
 	"extra": {
-		"installer-name": "apiwesome",
-		"branch-alias": {
-			"dev-master": "2.2.x-dev"
-		},
-		"screenshots": [
-			"https://raw.githubusercontent.com/nglasl/silverstripe-apiwesome/master/images/apiwesome-visibility.png"
-		]
+		"expose": [
+            "css",
+            "images",
+            "javascript"
+        ]
 	},
+    "autoload": {
+        "psr-4": {
+            "nglasl\\APIwesome": "src/"
+        }
+    },
 	"config": {
 		"allow-plugins": {
 			"composer/installers": true,
