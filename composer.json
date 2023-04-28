@@ -1,7 +1,7 @@
 {
 	"name": "nglasl/silverstripe-apiwesome",
 	"description": "A module for SilverStripe which will automatically create customisable JSON/XML feeds for your data objects (including pages), and provides a modular security token that can be used for other applications.",
-	"type": "silverstripe-module",
+	"type": "silverstripe-vendormodule",
 	"keywords": [
 		"silverstripe",
 		"api",
@@ -16,8 +16,9 @@
 		"email": "nathan@symbiote.com.au"
 	}],
 	"require": {
-		"silverstripe/cms": "~3.2",
-		"silverstripe/framework": "~3.2"
+		"silverstripe/cms": "^4",
+		"silverstripe/framework": "^4",
+		"silverstripe/vendor-plugin": "^1.6"
 	},
 	"extra": {
 		"installer-name": "apiwesome",
@@ -27,5 +28,11 @@
 		"screenshots": [
 			"https://raw.githubusercontent.com/nglasl/silverstripe-apiwesome/master/images/apiwesome-visibility.png"
 		]
+	},
+	"config": {
+		"allow-plugins": {
+			"composer/installers": true,
+			"silverstripe/vendor-plugin": true
+		}
 	}
 }
