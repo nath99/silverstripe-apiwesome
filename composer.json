@@ -32,7 +32,7 @@
 	},
     "autoload": {
         "psr-4": {
-            "nglasl\\APIwesome": "src/"
+            "nglasl\\APIwesome\\": "src/"
         }
     },
 	"config": {
