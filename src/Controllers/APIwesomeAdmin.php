@@ -21,7 +21,7 @@ class APIwesomeAdmin extends ModelAdmin
 
     private static $menu_title = 'JSON/XML';
 
-    private static $menu_icon = 'images/icon.png';
+    private static $menu_icon = 'nglasl/silverstripe-apiwesome:images/icon.png';
 
     private static $menu_description = 'The <strong>JSON/XML</strong> feed will only be available to data objects with attribute visibility set through here. All data objects are included by default, unless exclusions or inclusions have explicitly been defined.';
 
