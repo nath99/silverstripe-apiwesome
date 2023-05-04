@@ -8,7 +8,3 @@ mappings:
   DataObjectOutputConfiguration: nglasl\APIwesome\Models\DataObjectOutputConfiguration
   APIwesomePreviewButton: nglasl\APIwesome\Forms\APIwesomePreviewButton
   APIwesomeTokenView: nglasl\APIwesome\Forms\APIwesomeTokenView
-
-SilverStripe\ORM\DatabaseAdmin:
-  classname_value_remapping:
-    APIwesomeToken: nglasl\APIwesome\Models\APIwesomeToken
