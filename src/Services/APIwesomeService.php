@@ -526,7 +526,9 @@ class APIwesomeService
         $objectsXML = $XML->addChild('DataObjects');
         foreach ($objects as $object) {
             $classExists = isset($object['ClassName']);
-            $objectXML = $objectsXML->addChild($classExists ? $object['ClassName'] : DataObject::class);
+            $className = $classExists ? explode("\\", $object['ClassName']) : explode("\\", DataObject::class);
+            $objectXML = $objectsXML->addChild(end($className));
+
             if ($classExists && isset($object['ID'])) {
 
                 // Compose the appropriate output for all relationships.

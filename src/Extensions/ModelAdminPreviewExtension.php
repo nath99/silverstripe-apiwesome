@@ -15,27 +15,28 @@ use SilverStripe\Core\Extension;
  *	@author Nathan Glasl <nathan@symbiote.com.au>
  */
 
-class ModelAdminPreviewExtension extends Extension {
+class ModelAdminPreviewExtension extends Extension
+{
 
-	/**
-	 *	Add the CMS JSON/XML preview buttons.
-	 */
+    /**
+     *	Add the CMS JSON/XML preview buttons.
+     */
 
-	public function updateEditForm(&$form) {
+    public function updateEditForm(&$form)
+    {
 
-		$gridfield = $form->fields->items[0];
-		if(isset($gridfield) && ($gridfield->name !== DataObjectOutputConfiguration::class)) {
+        $gridfield = $form->fields->items[0];
+        if (isset($gridfield) && ($gridfield->name !== DataObjectOutputConfiguration::class)) {
 
-			// Make sure the appropriate JSON/XML exists for this data object type.
+            // Make sure the appropriate JSON/XML exists for this data object type.
 
-			$objects = singleton(APIwesomeService::class)->retrieveValidated($gridfield->name);
-			if($objects) {
+            $objects = singleton(APIwesomeService::class)->retrieveValidated($gridfield->name);
+            if ($objects) {
                 Requirements::css('nglasl/silverstripe-apiwesome:css/apiwesome.css');
-				Requirements::javascript('nglasl/silverstripe-apiwesome:javascript/apiwesome.js');
-				$configuration = $gridfield->config;
-				$configuration->addComponent(new APIwesomePreviewButton());
-			}
-		}
-	}
-
+                Requirements::javascript('nglasl/silverstripe-apiwesome:javascript/apiwesome.js');
+                $configuration = $gridfield->config;
+                $configuration->addComponent(new APIwesomePreviewButton());
+            }
+        }
+    }
 }

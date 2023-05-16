@@ -1,6 +1,9 @@
 ---
-name: apiwesome-routes
+Name: apiwesome-routes
+After:
+  - '#rootroutes'
+  - '#coreroutes'
 ---
-Director:
+SilverStripe\Control\Director:
   rules:
-    apiwesome: 'APIwesome'
+    apiwesome: 'nglasl\APIwesome\Controllers\APIwesome'

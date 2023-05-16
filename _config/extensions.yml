@@ -1,9 +1,9 @@
 ---
 name: apiwesome-extensions
 ---
-APIwesomeAdmin:
+nglasl\APIwesome\Controllers\APIwesomeAdmin:
   extensions:
-    - 'APIwesomeTokenExtension'
-ModelAdmin:
+    - 'nglasl\APIwesome\Extensions\APIwesomeTokenExtension'
+SilverStripe\Admin\ModelAdmin:
   extensions:
-    - 'ModelAdminPreviewExtension'
+    - 'nglasl\APIwesome\Extensions\ModelAdminPreviewExtension'
