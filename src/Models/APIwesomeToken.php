@@ -12,6 +12,7 @@ use SilverStripe\ORM\DataObject;
 
 class APIwesomeToken extends DataObject
 {
+    private static $table_name = 'APIwesomeToken';
 
     private static $db = array(
         'Hash' => 'Text'

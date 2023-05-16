@@ -31,6 +31,7 @@ use SilverStripe\Forms\LiteralField;
 
 class DataObjectOutputConfiguration extends DataObject
 {
+    private static $table_name = 'APIwesome_DataObjectOutputConfiguration';
 
     private static $db = array(
         'IsFor' => 'Varchar(255)',
